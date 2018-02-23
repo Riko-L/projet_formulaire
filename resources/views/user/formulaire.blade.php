@@ -17,28 +17,29 @@
                 <div class="form-group">
                     <label for="gender">Gender</label>
                     <select name="gender" class="form-control">
-                        <option value="men">men</option>
-                        <option value="women">women</option>
+                        <option value="<?=\App\Utilisateurs::GENDER_MALE ?>"><?= \App\Utilisateurs::genderFormatter(\App\Utilisateurs::GENDER_MALE) ?></option>
+                        <option value="<?=\App\Utilisateurs::GENDER_FEMALE ?>"><?= \App\Utilisateurs::genderFormatter(\App\Utilisateurs::GENDER_FEMALE) ?></option>
+                        <option value="<?=\App\Utilisateurs::GENDER_OTHER ?>"><?= \App\Utilisateurs::genderFormatter(\App\Utilisateurs::GENDER_OTHER) ?></option>
                     </select>
                 </div>
                 <div class="form-group">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="newsletter" value="yes"> suscribe to newsletter
+                        <input type="checkbox" name="newsletter" value="<?= \App\Utilisateurs::NEWS_YES ?>"> suscribe to newsletter
                       </label>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="mood" value="happy" checked>
-                            Happy
+                        <input type="radio" name="mood" value="<?= \App\Utilisateurs::MOOD_HAPPY ?>" checked>
+                            <?= \App\Utilisateurs::moodFormatter(\App\Utilisateurs::MOOD_HAPPY) ?>
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="mood" value="sad">
-                            Sad
+                        <input type="radio" name="mood" value="<?= \App\Utilisateurs::MOOD_SAD ?>">
+                          <?= \App\Utilisateurs::moodFormatter(\App\Utilisateurs::MOOD_SAD) ?>
                       </label>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Utilisateurs;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -44,7 +45,13 @@ class UserController extends Controller
             ],
         ];
 
-        return view('user.result', $data);
+        if ((new Utilisateurs())->insert($data['user'])) {
+            return view('user.result', $data);
+        } else {
+            // throw erreur
+        }
+
+
 
     }
 

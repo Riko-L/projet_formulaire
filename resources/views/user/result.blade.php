@@ -12,14 +12,14 @@
             <p>valeur : <b>{{ $user['lastname'] }}</b></p>
 
             <h3>Gender</h3>
-            <p>valeur : <b>{{ $user['gender'] }}</b></p>
+            <p>valeur : <b>{{ \App\Utilisateurs::genderFormatter($user['gender']) }}</b></p>
 
             <h3>Newsletter</h3>
-            <p>valeur : <b>{{ $user['newsletter'] }}</b></p>
+            <p>valeur : <b>{{ \App\Utilisateurs::newsletterFotmatter($user['newsletter']) }}</b></p>
 
             <h3>Mood</h3>
 
-            <p>valeur : <b>{{ $user['mood'] }}</b></p>
+            <p>valeur : <b>{{ \App\Utilisateurs::moodFormatter($user['mood'])}}</b></p>
 
         </div>
     </div>
