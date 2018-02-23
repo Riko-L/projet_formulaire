@@ -45,6 +45,12 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
 
+
+                {!! Form::open(array('url' => 'foo/bar')) !!}
+                // <?php echo Form::text('username'); ?>
+                {!! Form::close() !!}
+
+
             </form>
         </div>
     </div>
