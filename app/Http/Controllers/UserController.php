@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UtilisteursRequest;
 use App\Utilisateurs;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UtilisteursRequest $request)
     {
         $data = [
             'user' => [
@@ -42,7 +43,7 @@ class UserController extends Controller
                 'gender' => $request->input('gender'),
                 'newsletter' => $request->input('newsletter'),
                 'mood' => $request->input('mood'),
-            ],
+            ]
         ];
 
         if ((new Utilisateurs())->insert($data['user'])) {

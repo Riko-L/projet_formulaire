@@ -1,5 +1,7 @@
 @extends('template')
 @section('content')
+
+
     <div class="panel panel-default">
         <div class="panel-heading">
             <h2 class="panel-title">Resultats du formulaire</h2>
@@ -20,6 +22,7 @@
             <h3>Mood</h3>
 
             <p>valeur : <b>{{ \App\Utilisateurs::moodFormatter($user['mood'])}}</b></p>
+
 
         </div>
     </div>
