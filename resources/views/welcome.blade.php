@@ -19,4 +19,15 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="jumbotron">
+            <p class="text-center">
+            <h2>Formulaire #3: Class Form::</h2>
+            <p><a class="btn btn-primary btn-lg" href="/form/create" role="button">Go !</a></p>
+            </p>
+        </div>
+    </div>
+</div>
+
 @endsection

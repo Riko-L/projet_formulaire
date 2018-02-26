@@ -5,6 +5,7 @@
         <title>Formulaire</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
 
     </head>
     <body>
@@ -25,6 +26,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/user/create">Utilisateur</a></li>
                     <li><a href="/news/create">News</a></li>
+                    <li><a href="/form/create">Form Class</a></li>
                 </ul>
             </div>
         </nav>

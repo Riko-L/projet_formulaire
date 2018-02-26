@@ -20,3 +20,7 @@ Route::post('/user', 'UserController@store');
 
 Route::get('/news/create', 'NewsController@create');
 Route::post('/news', 'NewsController@store');
+
+
+Route::get('/form/create', 'FormController@create');
+Route::post('/form', 'FormController@store')->name('form');
