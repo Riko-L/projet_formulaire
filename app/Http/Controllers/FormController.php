@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FormUserRequest;
+use App\UsersMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class FormController extends Controller
 {
@@ -38,11 +41,18 @@ class FormController extends Controller
         $data = [
             'form' => [
                 'email' => $request->input('email'),
-            ]
-
+                'password' => $request->input('password'),
+           ]
         ];
 
-        return view('FormTest.result', $data);
+        if((new UsersMail())->insert($data['form'])){
+
+            return redirect(route('form.get'))->with('message', 'Votre email et mot de passe sont biens enregistrés ');
+
+    }
+
+
+
     }
 
     /**

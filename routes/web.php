@@ -22,5 +22,5 @@ Route::get('/news/create', 'NewsController@create');
 Route::post('/news', 'NewsController@store');
 
 
-Route::get('/form/create', 'FormController@create');
+Route::get('/form/create', 'FormController@create')->name('form.get');
 Route::post('/form', 'FormController@store')->name('form');
